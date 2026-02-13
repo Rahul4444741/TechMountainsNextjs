@@ -66,7 +66,8 @@ export default function RightSidebar({ onAddTask }) {
     bg-white
     border border-slate-100
     rounded-[2rem]
-    p-5 sm:px-[8rem] lg:p-2
+    p-5 lg:p-6
+    overflow-hidden
   "
     >
 
@@ -101,11 +102,14 @@ export default function RightSidebar({ onAddTask }) {
           className="
     bg-[#5051F9]
     rounded-2xl md:rounded-3xl
-    p-3 sm:p-3
-    flex items-center justify-between
+    p-3 sm:p-3.5 md:p-2 lg:p-2
+    flex items-center justify-between flex-nowrap
     text-white
     shadow-lg shadow-blue-200
-    gap-3
+    gap-3 sm:gap-4 md:gap-5 lg:gap-1 xl:gap-5
+    md:h-16 lg:h-20
+    w-full
+    min-w-0
   "
         >
           <div className="flex -space-x-2 sm:-space-x-3">
@@ -150,17 +154,17 @@ export default function RightSidebar({ onAddTask }) {
             </div>
           </div>
 
-          <div className="font-bold text-sm sm:text-base md:text-lg lg:text-xl">
+          <div className="font-semibold text-xs sm:text-sm md:text-sm lg:text-base flex-shrink-0">
             28:35
           </div>
 
-          <div className="flex gap-1 sm:gap-2">
-            <button className="p-1.5 sm:p-2 hover:bg-white/20 rounded-full transition-colors">
-              <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-            </button>
+          <div className="flex gap-1 sm:gap-2 items-center flex-shrink-0">
+            <button className="p-1 sm:p-1.5 md:p-2 hover:bg-white/20 rounded-full transition-colors">
+              <Phone className="w-4 h-4 sm:w-4 md:w-4 lg:w-5" />
+            </button> 
 
-            <button className="p-1.5 sm:p-2 hover:bg-white/20 rounded-full transition-colors">
-              <MoreVerticalIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+            <button className="p-1 sm:p-1.5 md:p-2 hover:bg-white/20 rounded-full transition-colors">
+              <MoreVerticalIcon className="w-4 h-4 sm:w-4 md:w-4 lg:w-5" />
             </button>
           </div>
         </div>

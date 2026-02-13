@@ -18,18 +18,18 @@ export default function TaskList({ tasks }) {
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.25 }}
               className="
-                bg-white rounded-[2rem] shadow-sm hover:shadow-md transition-shadow
-                p-4 sm:p-6
-              "
+                  bg-white rounded-[2rem] shadow-sm hover:shadow-md transition-shadow
+                  p-3 sm:p-4 md:p-4 lg:p-3 min-w-0
+                "
             >
-              <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
-                <div className="flex items-center gap-4 sm:gap-6">
+                <div className="flex flex-col gap-4 md:gap-5 lg:flex-row lg:flex-nowrap lg:items-center lg:justify-between">
+                  <div className="flex items-center gap-3 sm:gap-6 min-w-0">
                   <div className="w-12 h-12 rounded-3xl bg-[#5051F9] flex items-center justify-center text-white shadow-lg shadow-blue-200 shrink-0">
-                    <Play className="w-6 h-6 fill-current" />
+                      <Play className="w-5 h-5 sm:w-6 lg:w-5 fill-current" />
                   </div>
 
-                  <div>
-                    <div className="text-slate-900 text-xs mb-1 font-bold">
+                  <div className="min-w-0">
+                    <div className="text-slate-900 text-xs sm:text-sm mb-1 font-medium">
                       Start from
                     </div>
                     <div className="flex items-center gap-2 text-slate-400 text-sm whitespace-nowrap">
@@ -39,15 +39,15 @@ export default function TaskList({ tasks }) {
                   </div>
                 </div>
 
-                <div className="flex-1 lg:px-10">
-                  <div className="font-bold text-slate-800 mb-2">
+                <div className="flex-1 lg:px-4 min-w-0">
+                  <div className="font-bold text-slate-800 mb-2 truncate text-sm sm:text-base md:text-base lg:text-base xl:text-lg">
                     {task.title}
                   </div>
 
                   <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
                     <div className="flex items-center gap-2 text-slate-400 text-sm min-w-0">
                       <Link className="w-4 h-4 shrink-0" />
-                      <span className="text-[#5051F9] truncate">
+                      <span className="text-[#5051F9] truncate max-w-[180px] sm:max-w-[220px] md:max-w-[280px] lg:max-w-[200px]">
                         {task.link}
                       </span>
                     </div>
@@ -59,8 +59,8 @@ export default function TaskList({ tasks }) {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:items-center gap-4 lg:gap-8">
-                  <div className="w-full sm:w-56">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-3 lg:gap-6">
+                  <div className="w-full sm:w-44 md:w-48 lg:w-40">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-bold text-slate-800">
                         {task.progress}% complete
@@ -82,8 +82,8 @@ export default function TaskList({ tasks }) {
                       w-full sm:w-auto
                       flex items-center justify-center gap-2
                       bg-blue-50 text-[#5051F9]
-                      px-6 py-3 rounded-2xl
-                      font-bold text-sm
+                      px-4 py-2 sm:px-5 sm:py-2.5 md:px-4 lg:px-3 rounded-2xl
+                      font-bold text-sm lg:text-xs
                       hover:bg-blue-100 transition-colors
                     "
                   >

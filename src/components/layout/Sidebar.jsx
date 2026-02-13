@@ -40,7 +40,7 @@ export default function Sidebar() {
 
   return (
     <aside
-      className={`h-full peer group fixed left-0 top-0 z-30 bg-[#FBFAFF] border-r flex flex-col overflow-hidden py-6 transition-[width] duration-300 ease-in-out w-20 md:w-20 md:hover:w-64 border-none ${mobileExpanded ? "w-64" : "w-20"} md:w-20`}
+      className={`h-full peer group fixed left-0 top-0 z-30 bg-[#FBFAFF] border-r flex flex-col overflow-hidden py-6 transition-[width] duration-300 ease-in-out w-20 md:w-20 md:hover:w-64 border-none ${mobileExpanded ? "w-64" : "w-20"} md:w-20  overflow-y-scroll lg:overflow-hidden`}
     >
       <div className="mb-5 px-3">
         <button
